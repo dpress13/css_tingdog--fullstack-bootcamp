@@ -3,6 +3,14 @@ body {
   text-align: center;
 }
 
+button {
+  margin: 3px 0;
+}
+
+button .right {
+  margin-right: 3px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat-Bold', sans-serif;
 }
@@ -71,8 +79,6 @@ p {
 
 /* Title Image */
 .iphone-header {
-  /* margin-top: 5rem; added padding
-	to the nav bar bottom instead */
   transform: rotate(25deg);
   position: absolute;
   right: 30%;
@@ -156,12 +162,28 @@ p {
   margin: 20px 10px;
 }
 
-/* Title Media Query */
+/* Media Queries */
 
-@media (max-width: 991px) {
-  #title {
+@media (max-width: 767px) {
+  #title .container-fluid {
+    text-align: center;
+  }
+  .big-heading {
+    font-size: 3rem;
+    line-height: 1;
   }
   .iphone-header {
+    margin-top: 30px;
+    position: relative;
+    /* transform: rotate(25); */
+    width: 40%;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .iphone-header {
+    margin-top: 20px;
     position: static;
     transform: rotate(0);
   }
